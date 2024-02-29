@@ -1,17 +1,32 @@
-//add logo 
+import "./Navbar.css";
+import logo_light from '../assets/tg-black.png'
+import search_icon_light from '../assets/search-w.png'
+import * as FaIcons from 'react-icons/fa';
+import { link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="navBar" >
-        <input id="checkbox" type="checkbox"/>
-    <label class="toggle" for="checkbox">
-        <div id="bar1" class="bars"></div>
-        <div id="bar2" class="bars"></div>
-        <div id="bar3" class="bars"></div>
-    </label>
-    <h2>Shopify</h2>
-    </div>
-  )
-}
+    <header>
+      <div className="navbar">
+        <link to="#" className='menu-bars'>
+          <FaIcons.FaBars />
+        </link>
+      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+      
+      </nav>
+        <img src={logo_light} alt="" className="logo"/>
+        <ul>
+          <li> Products </li>
+          <li> Features </li>
+        </ul>
 
-export default Navbar
+        <div className= "search-box"> 
+          <input type="text" placeholder="Search"/>
+          <img src={search_icon_light} alt=""/>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;

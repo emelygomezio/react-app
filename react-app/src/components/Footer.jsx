@@ -1,10 +1,24 @@
+import "./Footer.css";
+import logo_light from '../assets/true-goods.png'
+
 const Footer = () => {
   return (
-  <div className="footerBtn">
-    {/* {github logo here} */}
-  <p className="btnContainer"><a href='https://github.com/emelygomezio/react-app'>GitHub Repository</a><span class="BG"> </span></p>
-  </div>
-  )
-}
+    <div className="footer-container">
+      <div className="footer-logo">
+      <img src={logo_light} alt="" />        
+      </div>
+      <div className="github-icon">
+        <a href="https://github.com/emelygomezio/react-app">
+          GitHub Repository 
+        </a>
+      </div>
+      <div className="footer-nav">
+        <div className="footer-bottom">
+          <p> made with ❤️ for Ironhack!</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
