@@ -2,18 +2,16 @@ import "./Navbar.css";
 import logo_light from '../assets/tg-black.png'
 import search_icon_light from '../assets/search-w.png'
 import * as FaIcons from 'react-icons/fa';
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <header>
       <div className="navbar">
-        <link to="#" className='menu-bars'>
+        {/*<link to="#" className='menu-bars'>
           <FaIcons.FaBars />
-        </link>
-      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-      
-      </nav>
+        </link>*/}
+
         <img src={logo_light} alt="" className="logo"/>
         <ul>
           <li> Products </li>
