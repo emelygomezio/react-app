@@ -6,21 +6,21 @@ function ProductCard() {
   
     return (
 
-        <div>
+        <div className="product-selection">
         {products.map(product => (
-            <div key={product.id} className="ProductCard">
+            <div key={product.id} className="product-card">
 
-            <img /* Sera un carrusel de imagenes*/
+            <img className="product-images"/* Sera un carrusel de imagenes*/
             src={product.images}
             alt={product.description}
             width='350px'
             />
             
-            <h2>Product:{product.title}</h2>
-            <h3>Description: {product.description} </h3>
-            <p> Price:{product.price}</p>
-            <p> Discount: {product.discountPercentage}</p>
-            <p> Rating: {product.rating}</p>
+            <h2 className="product-label">{product.title}</h2>
+            <em className="product-description">{product.description} </em>
+            <p> ${product.price}</p>
+            <p> {product.discountPercentage} % off!</p>
+            <p> Rating: {product.rating} ⭐</p>
             <p> Stock: {product.stock}</p>
             <p> Brand: {product.brand}</p>
             <p> Category: {product.category}</p>

@@ -52,3 +52,12 @@ ul li {
 .search-box input::placeholder {
     color: white;
 }
+
+
+.bars-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin:0;
+}

@@ -1,11 +1,14 @@
-import './Sidebar.css'
+/*import './Sidebar.css'
+import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from "react-icons/ai";
 
-const Sidebar = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default Sidebar;
+export const Sidebar = [
+  {
+    title: 'Home',
+    path: '/',
+    icon: 
+  }
+]
+
+export default Sidebar;*/

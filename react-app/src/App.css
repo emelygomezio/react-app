@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
 .page-container {
   display: flex;
   flex-direction: column;
@@ -8,6 +11,40 @@
   flex: 1;
 }
 
+.product-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.product-images {
+  padding-bottom: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.product-description {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 
 
 
