@@ -1,7 +1,12 @@
 
 const ErrorPage = () => {
   return (
-    <div>404 ERROR</div>
+    <div>
+         <div>404 ERROR</div>  
+         <Navbar />
+         <Footer /> 
+    </div>
+ 
   )
 }
 

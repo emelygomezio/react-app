@@ -1,93 +1,69 @@
-import productsData  from '../assets/products.json';
-import { useState } from 'react';
 
-function ProductCard() {
-    const [products, setProducts] = useState(productsData);
-  
-    return (
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-        <div className="product-selection">
-        {products.map(product => (
-            <div key={product.id} className="product-card">
 
-            <img className="product-images"/* Sera un carrusel de imagenes*/
+function ProductCard(props) {
+  const {product, hideProduct} = props;
+
+
+  return (
+    // <div className="product-selection">
+     
+        <div key={product.id} className="product-selection">
+          <img
+            className="product-images" /* Sera un carrusel de imagenes*/
             src={product.images}
             alt={product.description}
-            width='350px'
-            />
-            
+            width="350px"
+          />
             <h2 className="product-label">{product.title}</h2>
-            <em className="product-description">{product.description} </em>
-            <p> ${product.price}</p>
-            <p> {product.discountPercentage} % off!</p>
-            <p> Rating: {product.rating} ⭐</p>
-            <p> Stock: {product.stock}</p>
-            <p> Brand: {product.brand}</p>
-            <p> Category: {product.category}</p>
-    
-    
-            {/* <button onClick={() => deleteMovie(movie._id)} className="btn-delete"> */}
-              {/* Delete{" "}
-            </button> */}
-          </div>
-             ))}
+            <p className="product-price"> ${product.price}</p>
+            <p className="product-disc"> {product.discountPercentage} % off!</p>
+            <p className="product-rating"> Rating: {product.rating} ⭐</p>
+
+
+          <button onClick={() => hideProduct(product.id)} className="btn-delete"> Hide {""}
+          </button>
+          
+          <Link to="/View-More">  <button className="btn-view-more"> View More {""}</button>  </Link>
+          {/* <button className="btn-view-more"> View More {""}</button> */}
+          
         </div>
-        
-    );
+    //  </div>
+  );
+}
 
-  }
+
+export default ProductCard;
+
+
+// src/components/MovieCard.jsx
+
+// import React from 'react';
+
+// function MovieCard(props) {
+//     cç
   
-  export default ProductCard;
-
-
-// const categoryLabel = (category) =>{
-    //switch()
-//} 
-
-
-
-//   import React, { useState } from 'react';
-// import travelPlansData from "../assets/travel-plans.json";
-
-// function TravelList() {
-//     const [plans, setPlans] = useState(travelPlansData);
-
-//     const deletePlan = (id) => {
-//         const updatedPlans = plans.filter(plan => plan.id !== id);
-//         setPlans(updatedPlans);
-//     };
-
-//     const getLabels = (plan) => {
-//         let labels = [];
-//         if (plan.totalCost <= 350) {
-//             labels.push(<span key="great-deal" className="label great-deal">Great Deal</span>);
-//         }
-//         if (plan.totalCost >= 1500) {
-//             labels.push(<span key="premium" className="label premium">Premium</span>);
-//         }
-//         if (plan.allInclusive) {
-//             labels.push(<span key="all-inclusive" className="label all-inclusive">All-Inclusive</span>);
-//         }
-//         return labels; // Returns an array of JSX elements
-//     };
-
 //     return (
-//         <div>
-//             {plans.map(plan => (
-//                 <div key={plan.id} className='.travel-paln'>
-//                     <img src={plan.image} alt={plan.destination} />
-//                     <h1>{plan.destination} ({plan.days} days)</h1>
-//                     <p>{plan.description}</p>
-//                     <p><span>Price:</span> {plan.totalCost} €</p>           
-//                     <div className="labels-container">
-//                         {getLabels(plan)} 
-//                     </div>
-//                     <button className='button-delete' onClick={() => deletePlan(plan.id)}>Delete</button>
-//                     </div>
-//             ))}
-//         </div>
-//     );
-// }
-
-// export default TravelList;
+//       <div className="MovieCard">
+//         <h3>{movie.title}</h3>
+//         <p>Director: {movie.director}</p>
+//         <p>Rating: {movie.IMDBRating}</p>
   
+//         {/* {movie.hasOscars && <p>Got the Oscar Award! </p>}
+//         {!movie.hasOscars && <p>Great movie but no Oscars! </p>} */}
+//         {/*ternary style*/}
+//         {movie.hasOscars ? <p>Got the Oscar Award! </p> : <p>Great movie but no Oscars!</p>}
+  
+//         <button onClick={() => clickToDelete(movie._id)} className="btn-delete">
+//           Delete 
+//         </button>
+//       </div>
+//     );
+//   }
+  
+//   export default MovieCard;
+
+
+
