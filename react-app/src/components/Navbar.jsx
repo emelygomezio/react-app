@@ -3,15 +3,11 @@ import {useState} from 'react';
 import logo_light from '../assets/tg-black.png'
 import search_icon_light from '../assets/search-w.png'
 import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
 
 function Navbar() {
   return (
     <header>
       <div className="navbar">
-        <Link to="#" className='menu-bars'>
-          <FaBars />
-        </Link>
 
 
         <ul>

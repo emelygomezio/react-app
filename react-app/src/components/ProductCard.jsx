@@ -4,30 +4,32 @@ import { Link } from 'react-router-dom';
 
 
 function ProductCard(props) {
+
+
   const {product, hideProduct} = props;
 
-
+console.log(product);
   return (
     // <div className="product-selection">
+
      
         <div key={product.id} className="product-selection">
-          <img
-            className="product-images" /* Sera un carrusel de imagenes*/
-            src={product.images}
+            <img
+            className="product-images" /* Sera un carrusel de imagenes */
+            src={product.images[0]}
             alt={product.description}
             width="350px"
-          />
+          />          
             <h2 className="product-label">{product.title}</h2>
             <p className="product-price"> ${product.price}</p>
             <p className="product-disc"> {product.discountPercentage} % off!</p>
             <p className="product-rating"> Rating: {product.rating} ⭐</p>
 
 
-          <button onClick={() => hideProduct(product.id)} className="btn-delete"> Hide {""}
-          </button>
+          <button onClick={() => hideProduct(product.id)} className="btn-delete"> Hide{""} </button>
           
-          <Link to="/View-More">  <button className="btn-view-more"> View More {""}</button>  </Link>
-          {/* <button className="btn-view-more"> View More {""}</button> */}
+          {/* <Link to="/View-More">  <button className="btn-view-more"> View More {""}</button>  </Link> */}
+          <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More {""}</button> </Link>
           
         </div>
     //  </div>

@@ -1,14 +1,12 @@
-/*import './Sidebar.css'
-import { FaBars } from 'react-icons/fa';
-import { AiOutlineClose } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 
-export const Sidebar = [
-  {
-    title: 'Home',
-    path: '/',
-    icon: 
-  }
-]
+function Sidebar () {
+  return (
+    <div className='sidebar'> 
+        
+    </div>
+  )
+}
 
-export default Sidebar;*/
+export default Sidebar

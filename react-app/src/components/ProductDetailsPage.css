@@ -1,0 +1,97 @@
+.product-choice {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-choice h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el carrusel */
+  .slick-slider {
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slick-slide {
+    float: left;
+    min-height: 1px;
+    display: none;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 18px;
+    color: #333;
+    z-index: 1;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button {
+    font-size: 12px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: #333;
+  }
+
+  .product-tag {
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .product-details {
+    font-size: 20px;
+  }
+
+  .product-price {
+    margin-top: 10px;
+    font-size: 44px;
+    font-family:sans-serif;
+  }
+
+  .product-discount {
+    font-size: 29px;
+    font-weight: bold;
+  }

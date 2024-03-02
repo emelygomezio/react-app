@@ -1,18 +1,16 @@
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
-/*import Sidebar from './components/Sidebar.jsx';*/
 import Footer from './components/Footer.jsx';
 import ProductCard from './components/ProductCard.jsx';
 import { Routes, Route } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage.jsx';
-import { FaBars } from 'react-icons/fa';
-import { AiOutlineClose } from "react-icons/ai";
 import ProductDetailsPage from "./components/ProductDetailsPage.jsx";
 import AboutPage from "./Pages/AboutPage.jsx";
-import Dashboard from './components/Dashboard.jsx'
 import ProductList from "./components/ProductList.jsx";
 import { Link } from 'react-router-dom';
 import productsData from "./assets/products.json"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Sidebar from "./components/Sidebar.jsx";
 
 
 function App() {
@@ -20,26 +18,18 @@ function App() {
     <>
         <div className="page-container">
           <div className="content-wrap">
-
-            <FaBars className="bars-icon"/>
-            <AiOutlineClose />
-            <Navbar />
-            <ProductList /> 
-          
-
-            {/*<Sidebar />*/}
-            <h1 className="product-title"> New Products</h1>
-
-            <Routes>
-              <Route path="/View-More" element={<ProductDetailsPage products={productsData}/>} />
-            </Routes>
+        
+            <Navbar />           
+            <Sidebar/>
 
             <Routes>
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/" element= {<ProductList/>}  />
+              <Route path="/View-More/:productId" element={<ProductDetailsPage products={productsData}/>} />
+              {/* <Route path="/View-More" element={<ProductDetailsPage products={productsData}/>} /> */}
+              <Route path="*" element={ <ErrorPage /> } />
+
             </Routes>
-            
-         
-             
             <Footer />
 
 

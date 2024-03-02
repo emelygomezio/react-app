@@ -1,43 +1,65 @@
-import { useParams, Link, Navigate } from "react-router-dom";
 
-function ProductDetailsPage({ products }) {
-  const { productId } = useParams();
-//   console.log("projectId -->", projectId);
+import "./ProductDetailsPage.css";
+import { useParams, Link, Navigate , useLocation} from "react-router-dom";
+import { useState } from "react";
+import ProductCard from "./ProductCard";
+import Slider from 'react-slick'
+
+
+function ProductDetailsPage(props) {
+
+  const location = useLocation();
+  const productId = location.state?.productId;
+  const [products] = useState(props.products); // Assuming props.products is your products array
 
   const product = products.find((product) => product.id === productId);
-//   console.log(project);
 
-  if (!product)
+// console.log(products);
+// console.log(productId)
+// const product = products.filter((product) => product.id == productId);
+
+
+
+  
+  if (!product) {
     return (
       <>
-        <h1>We don't have it in stock at the moment, sorry for the inconvinient!</h1>
-        {/* <Link to="/">Go back home</Link> */}
+        <h1>We don't have it in stock at the moment, sorry for the inconvenient!</h1>
+        <Link to="*">Go back home</Link>
       </>
     );
+}
+
+  const sliderSettings ={
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  }
 
   return (
-  
-      <div key={product.id} className="product-choice">
-         
-         <h1>Project Details</h1>
     
-          <img
-            className="product-img" /* Sera un carrusel de imagenes*/
-            src={product.images}
-            alt={product.description}
-            width="350px"
-          />
+    <div key={product.id} className="product-choice">
+
+      <h1>Project Details</h1>
+          <Slider {...sliderSettings}>
+            {product.images.map((image, index) => (
+              <div key={index} >
+                <img src={image} alt={`Product ${index + 1}`} />
+              </div>
+            ))}
+          </Slider>
+          
             <h2 className="product-tag">{product.title}</h2>
             <em className="product-details">{product.description} </em>
-            <p> ${product.price}</p>
-            <p> {product.discountPercentage} % off!</p>
-            <p> Rating: {product.rating} ⭐</p>
-            <p> Stock: {product.stock}</p>
-            <p> Brand: {product.brand}</p>
-            <p> Category: {product.category}</p>
-
-
-      </div>
+            <p className="product-price"> ${product.price}</p>
+            <p className="product-discount"> {product.discountPercentage} % off!</p>
+            <p className="product-rate"> Rating: {product.rating} ⭐</p>
+            <p className="product-stock"> Stock: {product.stock}</p>
+            <p className="product-brand"> Brand: {product.brand}</p>
+            <p className="product-category"> Category: {product.category}</p>
+      </div> 
   );
 }
 

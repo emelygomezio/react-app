@@ -1,10 +1,12 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from 'react-router-dom';
 
 function AboutPage() {
   return (
     <div className="about-container">
         <div>
+        <Link to="/about"></Link>
         <h1 className="about-title">About Us</h1>
         <br />
         <p className="about-greeting"> Welcome to TrueGoods! </p>
@@ -50,7 +52,6 @@ function AboutPage() {
         </p>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 255, 255)
+  background-color: rgb(255, 255, 255);
 }
 .page-container {
   display: flex;
@@ -75,6 +75,13 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: black;
+}
+
 
 
 
