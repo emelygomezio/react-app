@@ -3,7 +3,9 @@ import "./ProductDetailsPage.css";
 import { useParams, Link, Navigate , useLocation} from "react-router-dom";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import Slider from 'react-slick'
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function ProductDetailsPage(props) {
@@ -30,7 +32,7 @@ function ProductDetailsPage(props) {
     );
 }
 
-  const sliderSettings ={
+  let sliderSettings ={
     dots: true,
     infinite: true,
     speed: 500,
@@ -43,10 +45,10 @@ function ProductDetailsPage(props) {
     <div key={product.id} className="product-choice">
 
       <h1>Project Details</h1>
-          <Slider {...sliderSettings}>
+          <Slider {...sliderSettings} className="slick-slider">
             {product.images.map((image, index) => (
-              <div key={index} >
-                <img src={image} alt={`Product ${index + 1}`} />
+              <div key={index} className="slick-slide">
+                <img src={image} alt={index + 1} className="slick-image"/>
               </div>
             ))}
           </Slider>

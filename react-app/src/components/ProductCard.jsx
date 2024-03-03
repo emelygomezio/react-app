@@ -1,43 +1,84 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function ProductCard(props) {
+  const { product } = props;
+  
+  // Local state to manage visibility
+  const [isVisible, setIsVisible] = useState(true);
 
+  // Function to hide the product card
+  const hideProduct = () => setIsVisible(false);
 
-  const {product, hideProduct} = props;
+  // Early return null if isVisible is false, effectively hiding the component
+  if (!isVisible) {
+    return null;
+  }
 
-console.log(product);
   return (
-    // <div className="product-selection">
+    <div key={product.id} className="product-selection">
+        <img
+        className="product-images"
+        src={product.images[0]}
+        alt={product.description}
+        width="350px"
+      />          
+        <h2 className="product-label">{product.title}</h2>
+        <p className="product-price"> ${product.price}</p>
+        <p className="product-disc"> {product.discountPercentage} % off!</p>
+        <p className="product-rating"> Rating: {product.rating} ⭐</p>
 
-     
-        <div key={product.id} className="product-selection">
-            <img
-            className="product-images" /* Sera un carrusel de imagenes */
-            src={product.images[0]}
-            alt={product.description}
-            width="350px"
-          />          
-            <h2 className="product-label">{product.title}</h2>
-            <p className="product-price"> ${product.price}</p>
-            <p className="product-disc"> {product.discountPercentage} % off!</p>
-            <p className="product-rating"> Rating: {product.rating} ⭐</p>
-
-
-          <button onClick={() => hideProduct(product.id)} className="btn-delete"> Hide{""} </button>
-          
-          {/* <Link to="/View-More">  <button className="btn-view-more"> View More {""}</button>  </Link> */}
-          <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More {""}</button> </Link>
-          
-        </div>
-    //  </div>
+      <button onClick={hideProduct} className="btn-delete"> Hide </button>
+      
+      <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More </button> </Link>
+      
+    </div>
   );
 }
 
 
+
 export default ProductCard;
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+
+// function ProductCard(props) {
+
+
+//   const {product, hideProduct} = props;
+
+// console.log(product);
+// console.log(product.id);
+//   return (
+//     // <div className="product-selection">
+   
+//         <div key={product.id} className="product-selection">
+    
+//             <img
+//             className="product-images" /* Sera un carrusel de imagenes */
+//             src={product.images[0]}
+//             alt={product.description}
+//             width="350px"
+//           />          
+//             <h2 className="product-label">{product.title}</h2>
+//             <p className="product-price"> ${product.price}</p>
+//             <p className="product-disc"> {product.discountPercentage} % off!</p>
+//             <p className="product-rating"> Rating: {product.rating} ⭐</p>
+
+
+//           <button onClick={() => hideProduct(product.id)} className="btn-delete"> Hide{""} </button>
+          
+//           {/* <Link to="/View-More">  <button className="btn-view-more"> View More {""}</button>  </Link> */}
+//           <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More {""}</button> </Link>
+          
+//         </div>
+//     //  </div>
+//   );
+// }
+
+
+// export default ProductCard;
 
 
 // src/components/MovieCard.jsx

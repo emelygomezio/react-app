@@ -10,17 +10,19 @@ import ProductList from "./components/ProductList.jsx";
 import { Link } from 'react-router-dom';
 import productsData from "./assets/products.json"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from "./components/Sidebar.jsx";
+import { MdHomeFilled } from "react-icons/md";
+import { FaUserCheck } from "react-icons/fa";
+import { FaBoxOpen } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 
 function App() {
   return (
     <>
-        <div className="page-container">
+        <div className="App">
           <div className="content-wrap">
-        
+            <div className="page-container">
             <Navbar />           
-            <Sidebar/>
 
             <Routes>
               <Route path="/about" element={<AboutPage />} />
@@ -36,6 +38,8 @@ function App() {
             {/* {Roters about page} */}
 
           </div>
+          </div>
+
         </div>
     </>
   );
