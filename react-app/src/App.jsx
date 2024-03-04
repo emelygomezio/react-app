@@ -14,6 +14,7 @@ import { MdHomeFilled } from "react-icons/md";
 import { FaUserCheck } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+import HomePage from "./components/HomePage.jsx";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           <div className="content-wrap">
             <div className="page-container">
             <Navbar />           
-
+            {/* <HomePage /> */}
             <Routes>
               <Route path="/about" element={<AboutPage />}/>
               <Route path="/" element= {<ProductList/>}  />

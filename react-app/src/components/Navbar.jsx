@@ -24,7 +24,7 @@ function Navbar() {
             <FaBars onClick={showSidebar}/> 
           </Link>
           <Link to="/"> <img src={logo_light} alt="" className="logo" /> </Link>
-          {/*<Link to="/products"> Products </Link>*/}
+          
           <Link to="/about" className="about-link-nav"> About </Link>
         </ul>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

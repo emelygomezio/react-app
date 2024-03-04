@@ -22,16 +22,17 @@ function ProductCard(props) {
         src={product.images[0]}
         alt={product.description}
         width="350px"
-      />          
+      /> 
+      <div>       
         <h2 className="product-label">{product.title}</h2>
         <p className="product-card-price"> ${product.price}</p>
         <p className="product-disc"> {product.discountPercentage} % off!</p>
         <p className="product-rating"> Rating: {product.rating} ⭐</p>
-
-      <button onClick={hideProduct} className="btn-delete"> Hide </button>
-      
-      <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More </button> </Link>
-      
+      </div>  
+      <div className="buttons">
+        <button onClick={hideProduct} className="btn-delete"> Hide </button>
+        <Link to={`/View-More/${product.id}`} state={{ productId: product.id }}> <button className="btn-view-more"> View More </button> </Link>
+        </div>
     </div>
   );
 }
