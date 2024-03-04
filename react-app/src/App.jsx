@@ -25,7 +25,7 @@ function App() {
             <Navbar />           
 
             <Routes>
-              <Route path="/about" element={<AboutPage />} />
+              <Route path="/about" element={<AboutPage />}/>
               <Route path="/" element= {<ProductList/>}  />
               <Route path="/View-More/:productId" element={<ProductDetailsPage products={productsData}/>} />
               {/* <Route path="/View-More" element={<ProductDetailsPage products={productsData}/>} /> */}

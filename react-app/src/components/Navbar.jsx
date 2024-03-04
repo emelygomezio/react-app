@@ -6,14 +6,16 @@ import { Link } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
-
+import { IconContext } from 'react-icons';
 
 function Navbar() {
   const [sidebar, setSidebar] =useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <header>
+    <IconContext.Provider  value ={{color: "#fff"}}/>
       <div className="navbar">
 
 
@@ -23,12 +25,12 @@ function Navbar() {
           </Link>
           <Link to="/"> <img src={logo_light} alt="" className="logo" /> </Link>
           {/*<Link to="/products"> Products </Link>*/}
-          <Link to="/about"> About </Link>
+          <Link to="/about" className="about-link-nav"> About </Link>
         </ul>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items'>
+          <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
-              <Link to="#" className='menu-bars'>
+              <Link to="#" className='x-icon'>
                 <AiOutlineClose />
               </Link>
             </li>
@@ -44,6 +46,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
+        <IconContext.Provider />
         <div className= "search-box"> 
           <input type="text" placeholder="Search"/>
           <img src={search_icon_light} alt=""/>

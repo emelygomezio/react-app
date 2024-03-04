@@ -1,24 +1,20 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
+import '../components/AboutPage.css';
 
 function AboutPage() {
   return (
     <div className="about-container">
         <div>
         <Link to="/about"></Link>
-        <h1 className="about-title">About Us</h1>
+        <h1 className="about-greeting">Welcome to True Goods! 🧡 </h1>
         <br />
-        <p className="about-greeting"> Welcome to TrueGoods! </p>
-        <br />
-        <img src="../assets/search-w.png" alt="about-us-image" className="about-img" />
         <div className="about-contents">
         <p>
           {" "}
-          Hey there! We're TrueGoods, your go-to destination for all things
-          awesome. We're not your average e-commerce brand – we're the cool kids
-          on the block, bringing you a curated selection of the coolest stuff
-          around.
+          Hey there! 👋🏼 We're TrueGoods, your go-to destination for all things
+          awesome. 
         </p>
         <br />
         <p>
@@ -48,7 +44,7 @@ function AboutPage() {
           {" "}
           Dive into our collection, discover something you love, and join the
           TrueGoods fam today. Trust us, you won't regret it. Let's make
-          shopping cool again!
+          shopping cool again! ✌🏼
         </p>
         </div>
       </div>

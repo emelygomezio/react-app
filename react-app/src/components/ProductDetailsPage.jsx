@@ -44,7 +44,7 @@ function ProductDetailsPage(props) {
     
     <div key={product.id} className="product-choice">
 
-      <h1>Project Details</h1>
+      <h1 className="prod-headline">Product Details</h1>
           <Slider {...sliderSettings} className="slick-slider">
             {product.images.map((image, index) => (
               <div key={index} className="slick-slide">
@@ -55,12 +55,15 @@ function ProductDetailsPage(props) {
           
             <h2 className="product-tag">{product.title}</h2>
             <em className="product-details">{product.description} </em>
-            <p className="product-price"> ${product.price}</p>
-            <p className="product-discount"> {product.discountPercentage} % off!</p>
+            <p className="product-price"> ${product.price} <p className="product-discount">({product.discountPercentage} % off!)</p></p>
+            {/* <p className="product-discount"> {product.discountPercentage} % off!</p> */}
+
+            <div className="product-info-box">
             <p className="product-rate"> Rating: {product.rating} ⭐</p>
             <p className="product-stock"> Stock: {product.stock}</p>
             <p className="product-brand"> Brand: {product.brand}</p>
             <p className="product-category"> Category: {product.category}</p>
+            </div>
       </div> 
   );
 }
