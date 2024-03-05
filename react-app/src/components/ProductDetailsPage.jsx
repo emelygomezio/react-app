@@ -59,10 +59,10 @@ function ProductDetailsPage(props) {
             {/* <p className="product-discount"> {product.discountPercentage} % off!</p> */}
 
             <div className="product-info-box">
-            <p className="product-rate"> Rating: {product.rating} ⭐</p>
-            <p className="product-stock"> Stock: {product.stock}</p>
-            <p className="product-brand"> Brand: {product.brand}</p>
-            <p className="product-category"> Category: {product.category}</p>
+            <p className="product-rate"> <strong>Rating:</strong> {product.rating} ⭐</p>
+            <p className="product-stock"> <strong>Stock:</strong> {product.stock}</p>
+            <p className="product-brand"> <strong>Brand:</strong> {product.brand}</p>
+            <p className="product-category"> <strong>Category: </strong>{product.category}</p>
             </div>
       </div> 
   );

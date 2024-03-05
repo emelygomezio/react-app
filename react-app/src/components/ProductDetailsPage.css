@@ -14,7 +14,6 @@
     font-family: "Lato";
   }
 
-
   
   /* Estilos para el carrusel */
   .slick-slider {
@@ -41,6 +40,7 @@
     float: left;
     min-height: 1px;
     display: none;
+    color: black;
   }
   
   .slick-prev,
@@ -130,25 +130,21 @@
 
   .product-rate {
     font-size: 20px;
-    font-weight: bold;
     font-family: Lato;
   }
 
   .product-stock {
     font-size: 20px;
-    font-weight: bold;
     font-family: Lato;
   }
 
   .product-brand {
     font-size: 20px;
-    font-weight: bold;
     font-family: Lato;
   }
 
   .product-category {
     font-size: 20px;
-    font-weight: bold;
     font-family: Lato;
   }
 

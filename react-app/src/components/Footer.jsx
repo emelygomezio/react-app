@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-logo">
       <img src={logo_light} alt="" />        
       </div>
-      <div className="github-icon">
+      <div className="github-button">
         <a href="https://github.com/emelygomezio/react-app">
           GitHub Repository 
         </a>

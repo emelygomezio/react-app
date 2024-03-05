@@ -6,7 +6,7 @@ export const SidebarData = [
     {
         title:"Home",
         icon: <MdHomeFilled />,      
-        link: "/home",
+        link: "/",
         cName: 'nav-text'
     },
     {
@@ -18,7 +18,13 @@ export const SidebarData = [
     {
         title:"Products",
         icon: <FaBoxOpen />,      
-        link: "/about",
+        link: "/products",
+        cName: 'nav-text'
+    },
+    {
+        title:"Add Product",
+        icon: <FaBoxOpen />,      
+        link: "/addproduct",
         cName: 'nav-text'
     },
 ];

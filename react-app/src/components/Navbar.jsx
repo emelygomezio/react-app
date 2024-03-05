@@ -8,24 +8,21 @@ import { AiOutlineClose } from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import { IconContext } from 'react-icons';
 
+
+
 function Navbar() {
-  const [sidebar, setSidebar] =useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <header>
-    <IconContext.Provider  value ={{color: "#fff"}}/>
       <div className="navbar">
-
-
         <ul>
           <Link to="#" className="menu-bars"> 
             <FaBars onClick={showSidebar}/> 
           </Link>
           <Link to="/"> <img src={logo_light} alt="" className="logo" /> </Link>
-          
-          <Link to="/about" className="about-link-nav"> About </Link>
         </ul>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
@@ -37,26 +34,85 @@ function Navbar() {
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
-                  <Link to={item.path}>
+                  <Link to={item.link} >
                     {item.icon}
-                    <span> {item.title} </span>
+                    <span>{item.title}</span>
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
         </nav>
-        <IconContext.Provider />
-        <div className= "search-box"> 
+        <div className="search-box"> 
           <input type="text" placeholder="Search"/>
           <img src={search_icon_light} alt=""/>
         </div>
       </div>
     </header>
   );
-};
-
+}
 export default Navbar;
+// function Navbar(props) {
+//   const [sidebar, setSidebar] =useState(false);
+//   const toggleDisplay = props;
+
+//   const showSidebar = () => setSidebar(!sidebar);
+//   const [isVisible, setIsVisible] = useState(true);
+
+
+ 
+//   // function toggleDisplay() {
+//   //   var element = document.getElementById("bg");
+//   //   if (element.style.display == "block") {
+//   //     element.style.display = "none"; // Or "flex", "inline-block", etc., depending on your layout needs
+//   //   } 
+//   // }
+
+//   return (
+//     <header>
+//     {/* <IconContext.Provider/> */}
+//       <div className="navbar">
+
+
+//         <ul>
+//           <Link to="#" className="menu-bars"> 
+//             <FaBars onClick={showSidebar}/> 
+//           </Link>
+//           <Link to="/"> <img src={logo_light} alt="" className="logo" /> </Link>
+          
+//           {/* <Link to="/about" className="about-link-nav"> About </Link> */}
+//         </ul>
+//         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+//           <ul className='nav-menu-items' onClick={showSidebar}>
+//             <li className='navbar-toggle'>
+//               <Link to="#" className='x-icon'>
+//                 <AiOutlineClose />
+//               </Link>
+//             </li>
+//             {SidebarData.map((item, index) => {
+//               return (
+//                 <li key={index} className={item.cName}>
+//                    {/* <Link to="/your-path" onClick={handleClick}>Click Me</Link> */}
+//                   <Link to={item.link} onClick={toggleDisplay}>
+//                     {item.icon}
+//                     <span> {item.title} </span>
+//                   </Link>
+//                 </li>
+//               )
+//             })}
+//           </ul>
+//         </nav>
+//         {/* <IconContext.Provider /> */}
+//         <div className= "search-box"> 
+//           <input type="text" placeholder="Search"/>
+//           <img src={search_icon_light} alt=""/>
+//         </div>
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
 
 
 
