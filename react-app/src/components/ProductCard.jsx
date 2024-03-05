@@ -25,9 +25,8 @@ function ProductCard(props) {
       /> 
       <div className="complete-info-card">       
         <h2 className="product-label">{product.title}</h2>
-        <p className="product-card-price"> ${product.price}</p>
-        <p className="product-disc"> {product.discountPercentage} % off!</p>
-        <p className="product-rating"> Rating: {product.rating} ⭐</p>
+        <p className="product-card-price"> ${product.price}<p className="product-disc"> ({product.discountPercentage} % off!)</p></p>
+        <p className="product-rating"> Rating: {product.rating} ⭐ </p>
       </div>  
       
       <div className="buttons">

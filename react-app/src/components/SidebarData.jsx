@@ -1,29 +1,31 @@
 import { MdHomeFilled } from "react-icons/md";
 import { FaUserCheck } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
+import { IoAddOutline } from "react-icons/io5";
+
 
 export const SidebarData = [
     {
         title:"Home",
-        icon: <MdHomeFilled />,      
+        icon: <MdHomeFilled className="sidebar-icon"/>,      
         link: "/",
         cName: 'nav-text'
     },
     {
         title:"About Us",
-        icon: <FaUserCheck />,      
+        icon: <FaUserCheck className="sidebar-icon"/>,      
         link: "/about",
         cName: 'nav-text'
     },
     {
         title:"Products",
-        icon: <FaBoxOpen />,      
+        icon: <FaBoxOpen className="sidebar-icon"/>,      
         link: "/products",
         cName: 'nav-text'
     },
     {
         title:"Add Product",
-        icon: <FaBoxOpen />,      
+        icon: <IoAddOutline className="sidebar-icon"/>,      
         link: "/addproduct",
         cName: 'nav-text'
     },

@@ -94,7 +94,8 @@ function AddProduct() {
 
   return (
     <div className="AddProduct" >
-      <h4 className="form-title">If some products are missing please fill the next form so we can handle the re-stock of it. </h4>
+      <h1 className= "form-title"> Can't Find A Product? </h1>
+      <h4 className="form-subtitle">If some products are missing, please fill the following form so we can handle the re-stock of it. </h4>
 
        <form>
         <label className="form-label"> Product: </label>
