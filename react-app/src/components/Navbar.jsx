@@ -43,10 +43,10 @@ function Navbar() {
             })}
           </ul>
         </nav>
-        <div className="search-box"> 
+        {/* <div className="search-box"> 
           <input type="text" placeholder="Search"/>
           <img src={search_icon_light} alt=""/>
-        </div>
+        </div> */}
       </div>
     </header>
   );

@@ -7,7 +7,7 @@
 
 }
 
-.logo {
+/* .logo {
     width: 220px;
     display:flex;
     justify-content:flex-start;
@@ -15,7 +15,7 @@
     cursor: pointer;
     margin-top: -35px;
     margin-left: 5rem;
-}
+} */
 
 .menu-bars {
     display: flex;
@@ -74,7 +74,6 @@
     border-radius: 4px;
 }
 
-
 .nav-menu-items {
     width: 100%;
 }
@@ -104,7 +103,7 @@ ul li {
     cursor: pointer;
 }
 
-.search-box {
+/* .search-box {
     display: flex;
     align-items:center;
     background: #f4b135;
@@ -130,7 +129,7 @@ ul li {
 
 .search-box input::placeholder {
     color: white;
-}
+} */
 
 
 .bars-icon {

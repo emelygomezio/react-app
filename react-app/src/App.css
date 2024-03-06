@@ -163,7 +163,7 @@ ul li {
     cursor: pointer;
 }
 
-.search-box {
+/* .search-box {
     display: flex;
     align-items:center;
     background: rgb(254, 177, 76);
@@ -189,7 +189,7 @@ ul li {
 
 .search-box input::placeholder {
     color: white;
-}
+} */
 
 
 .bars-icon {
@@ -214,13 +214,13 @@ ul li {
 /* PRODUCT CARD CSS */
 
 .product-title {
-    font-size: 30px;
+    font-size: 40px;
     font-family: Lato;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .complete-info-card {
@@ -233,17 +233,34 @@ ul li {
     --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
 
     padding: 1rem;
-    padding-top: 11rem;
-    width: 17rem;
-    height: 27rem;
+    padding-top: 0.5rem;
+    width: 20rem;
+    height: 30rem;
     background-color: var(--bg-card);
   
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+}
+
+.product-selection {
+  display: inline-grid;
+  width: 20rem;
+  margin-left: 3.2rem;
+  margin-bottom: 2rem;
+  /* display: grid;
+  flex-direction: column;
+  justify-items: center; */
+
+  /* height: 30rem;  */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* grid-gap: 10px; */
+
+}
 
 .product-images {
-  max-width: 100%;
-  max-height: 300px;
+  width: 100%;
+  height: 200px;
   border-radius: 1rem;
   padding-bottom: 5%;
   margin-top: 1rem;
@@ -251,8 +268,7 @@ ul li {
   justify-content: center;
   display: flex;
   flex-direction: column;
-
-  overflow: hidden;
+  /* overflow: hidden;
   cursor: pointer;
 
   position: relative;
@@ -265,7 +281,7 @@ ul li {
   border-radius: 0.5rem;
 
   position: absolute;
-  left: 0.8%; 
+  left: 0.8%;  */
   /* transform: translate(-50%, -50%); */
 
   /* width: 3rem;
@@ -282,7 +298,7 @@ ul li {
 
     width: 100%;
   
-    font-size: 20px;
+    font-size: 25px;
     font-family: Lato;
     font-weight: bold;
     color: var(--dark);
@@ -306,24 +322,7 @@ ul li {
     color: rgb(78, 76, 85);
     font-family: Lato;
     margin-top: -1rem;
-}
-
-.buttons {
-    align-items: center;
-    position: relative;
-  
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    
-    margin-top: -8.8rem;
-    padding: 1rem;
-    width: 14rem;
-    background-color: var(--bg-card);
-  
-    border-radius: 1rem;
-    position: absolute;
-    left: 1.8%; 
+    font-size: 20px;
 }
 
 .btn-delete {
@@ -340,6 +339,8 @@ ul li {
     overflow: hidden;
     background-color: #bdbbb6;
     color: white;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
 }
 
 .btn-view-more {
@@ -356,6 +357,8 @@ ul li {
     overflow: hidden;
     background-color: #ffb01e;
     color: white;
+    margin-left: 5rem;
+
 }
 
 .product-disc {
@@ -363,11 +366,101 @@ ul li {
   font-weight: bold;
 }
 
+/* FILTER CSS */
+.filter-box-title {
+  font-family: Lato;
+  font-size: 25px;
+  justify-content: center;
+  text-align: center;
+}
+
+.filter-container {
+  width: 800px;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #d9dde3;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  display: block;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #dddee6;
+}
+
+.wrapper {
+  margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  height: 53px;
+  color: #e3e5ef;
+  background: #3e7cfa;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #000;
+  padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span {
+  position: absolute;
+  right: 13px;
+  cursor: pointer;
+  line-height: 53px;
+  color: #000;
+}
+
+.input-box span:hover {
+  color: #46495E!important;
+}
+
+.wrapper .price-settings {
+  margin: 1.56rem 0 1.25rem;
+}
+
+.filter-tag {
+  font-family: Lato;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.price-title {
+  font-family: Lato;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.expensive 
+
+.moderate 
+
+.affordable 
+
+.budget-friendly 
+
+.clear-filter
+
 /* HOME PAGE CSS */
 .home-background {
     width: 100vw;
     height: 100vh;
-    background-image: url(./assets/tgback.png);
+    background-image: url(./assets/rectangle.png);
     background-size: cover;
     /* background-color: orange; */
 }
@@ -410,7 +503,7 @@ ul li {
     margin-bottom: 2rem;
 }
 .home-headline {
-    font-size: 55px;
+    font-size: 80px;
     text-wrap: wrap;
     color: white;
     font-family: Lato;
@@ -419,7 +512,7 @@ ul li {
     word-break: break-all;
     word-wrap: break-word;
     white-space: pre-wrap;
-    width: 48%;
+    width: 45%;
 }
 
 /* PRODUCT PAGE CSS */
@@ -590,7 +683,7 @@ ul li {
 
 /* FORM CSS  */
 .AddProduct {
-    width: 670px;
+    width: 770px;
     background: #F8F9FD;
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
     border-radius: 40px;
@@ -598,8 +691,8 @@ ul li {
     border: 5px solid rgb(255, 255, 255);
     box-shadow: rgba(222, 121, 13, 0.878) 0px 30px 30px -20px;
     margin: 20px;
-    margin-left: 18rem;
-    margin-right: 22rem; 
+    margin-left: 36rem;
+    margin-right: 10rem; 
 }
 
 .form-title {
@@ -634,7 +727,7 @@ ul li {
     display: flex;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    width: 500px;
+    width: 600px;
     height: 50px;
     margin-left: 3rem;
     border-radius: 10px;
@@ -668,6 +761,8 @@ ul li {
 /* ABOUT PAGE CSS  */
 .about-container {
     font-family: "Lato";
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .about-title {
@@ -677,19 +772,33 @@ ul li {
     margin-top: 20px;
 }
 
+.about-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
 .about-greeting {
     font-family: "Lato";
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .about-contents {
     font-family: "Lato";
-    justify-content: center;  
     padding-bottom: 2rem; ;
-    margin: 8px 15rem ;
+    justify-content: center;
+    text-align: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: 18px;
 }
+
 
 /* ERROR PAGE CSS */
 
@@ -728,14 +837,43 @@ ul li {
     padding-bottom: 2rem;
 }
 
-.github-icon {
+/* .github-icon {
     display: flex;
     justify-content: center;
     color: white;
 
-}
+} */
 
+.github-button {
+    display: flex;
+    background-color: rgb(234, 151, 18);
+    color: #ffffff;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: .6s ease;
+    margin-left: 50rem;
+    margin-right: 50rem;
 
+  }
+  
+  .button svg {
+    height: 30px;
+  }
+  
+  .button:hover {
+    box-shadow: none;
+  }
 
 
 

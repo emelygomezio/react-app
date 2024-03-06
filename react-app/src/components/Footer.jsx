@@ -1,5 +1,6 @@
 import "./Footer.css";
-import logo_light from '../assets/true-goods.png'
+import logo_light from "../assets/true-goods.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (

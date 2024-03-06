@@ -1,4 +1,3 @@
-import tgback from '../assets/tgback.png';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {

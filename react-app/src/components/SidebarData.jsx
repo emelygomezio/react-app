@@ -2,6 +2,8 @@ import { MdHomeFilled } from "react-icons/md";
 import { FaUserCheck } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
 import { IoAddOutline } from "react-icons/io5";
+import { FaFilter } from "react-icons/fa6";
+
 
 
 export const SidebarData = [
@@ -27,6 +29,12 @@ export const SidebarData = [
         title:"Add Product",
         icon: <IoAddOutline className="sidebar-icon"/>,      
         link: "/addproduct",
+        cName: 'nav-text'
+    },
+    {
+        title:"Filter",
+        icon: <FaFilter className="sidebar-icon"/>,      
+        link: "/filter",
         cName: 'nav-text'
     },
 ];

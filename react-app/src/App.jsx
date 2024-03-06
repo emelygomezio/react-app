@@ -18,6 +18,7 @@ import ProductList from "./components/ProductList.jsx";
 import { useState } from 'react';
 import AddProduct from "./Pages/AddProduct.jsx";
 import { ProductsProvider } from './components/ProductsContext'; // Adjust the path as needed
+import FilterPage from "./components/FilterPage.jsx";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
               <Route path="/about" element={<AboutPage />}/>
               <Route path="/products" element= {<ProductList />}  />
               <Route path="/addproduct" element= {<AddProduct/>}  />
+              <Route path="/filter/" element= {<FilterPage products={productsData}/>}  />
               <Route path="/View-More/:productId" element={<ProductDetailsPage products={productsData}/>} />
               <Route path="*" element={ <ErrorPage /> } />
             </Routes>
