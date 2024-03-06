@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
-import '../components/AboutPage.css';
+// import '../components/AboutPage.css';
 import iconpng from "../assets/icon.png";
 
 function AboutPage() {

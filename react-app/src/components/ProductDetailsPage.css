@@ -15,8 +15,8 @@
   }
 
   
-  /* Estilos para el carrusel */
-  .slick-slider {
+Estilos para el carrusel 
+.slick-slider {
     position: relative;
     box-sizing: border-box;
     user-select: none;
@@ -162,6 +162,4 @@
 
   .prod-headline {
     font-size: 20px;
-  }
-
-
+  } 

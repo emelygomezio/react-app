@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; }
   /* overflow: hidden;
   cursor: pointer;
 
@@ -70,7 +70,7 @@
   /* transform: translate(-50%, -50%); */
 
   /* width: 3rem;
-  fill: var(--light);   */
+  fill: var(--light);  
 }
 
 .product-images:hover {
@@ -149,4 +149,4 @@
 .product-disc {
   font-size: 20px;
   font-weight: bold;
-}
+} 
