@@ -43,10 +43,11 @@ function FilterPage({ products }) {
       <h3 className="filter-box-title"> Filter Products</h3>
 
     <div className="filter-container">
-        <p className="filter-tag">Filter</p>
+        {/* <p className="filter-tag">Filter</p> */}
+        
         <div className="price-settings">
           <label className="price-title">Price</label>
-          
+          <div className="price-choices"> 
           <button onClick={() => setFilterPrice("expensive")} className="expensive">
             $1,000 - +
           </button>
@@ -60,6 +61,7 @@ function FilterPage({ products }) {
             $0 - $99
           </button>
           <button onClick={() => setFilterPrice("")} className="clear-filter">Clear Filter</button>
+        </div>
         </div>
       </div> 
 
