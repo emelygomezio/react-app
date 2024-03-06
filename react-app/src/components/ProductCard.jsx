@@ -26,7 +26,8 @@ function ProductCard(props) {
         width="350px"
       /> 
         <h2 className="product-label">{product.title}</h2>
-        <p className="product-card-price"> ${product.price} </p> <p className="product-disc"> ({product.discountPercentage} % off!)</p>
+        <p className="product-card-price"> ${product.price} <span className="product-disc"> ({product.discountPercentage} % off!)</span></p> 
+        
         <p className="product-rating"> Rating: {product.rating} ⭐ </p>
         
         <div className="buttons">

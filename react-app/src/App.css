@@ -313,6 +313,7 @@ ul li {
 .product-disc {
     color: rgb(233, 133, 18);
     font-family: Lato;
+    font-size: 20px;
     margin-top: 10px;
     margin-left: 10px;
     display: flex;
@@ -366,7 +367,7 @@ ul li {
 .discount {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: rgb(241, 241, 241);
   font-family: Lato;
 }
 

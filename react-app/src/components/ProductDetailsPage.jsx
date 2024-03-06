@@ -67,6 +67,7 @@ function ProductDetailsPage() {
       <p className="product-price">
         ${product.price} <span className="discount">({product.discountPercentage}% off!)</span>
       </p>
+
       <div className="product-info-box">
         <p className="product-rate"><strong>Rating:</strong> {product.rating} ⭐</p>
         <p className="product-stock"><strong>Stock:</strong> {product.stock}</p>
